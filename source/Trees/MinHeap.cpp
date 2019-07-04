@@ -169,7 +169,8 @@ int MinHeap::pop()
     }
     swap(&array[size], &array[1]);
     size--;
-    return array[1];
+    sink(array[1]);
+    return array[size];
 }
 
 /** peek()
